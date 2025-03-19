@@ -1,0 +1,120 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* סגנונות גלובליים לעורך */
+:root {
+  --primary-color: #2962ff;
+  --primary-hover: #0039cb;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+label,a,h1,h2,h3,h4,h5,h6,p,span,li,ul{
+  font-family: 'Noto Sans Hebrew', sans-serif;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+}
+
+/* עיצוב מחדש של פקדי עורך Puck */
+[data-puck-component-menu] {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+[data-puck-component-menu-item] {
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+[data-puck-component-menu-item]:hover {
+  background-color: #f0f4ff;
+}
+
+/* עיצוב לכפתורים */
+button, 
+[role="button"],
+[data-puck-button] {
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+/* עיצוב לשדות קלט */
+input, 
+textarea, 
+select {
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.2);
+}
+
+/* עיצוב קולור פיקר */
+input[type="color"] {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+
+/* עיצוב כפתור העלאת קבצים */
+[data-file-upload-label] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+  transition: all 0.2s;
+}
+
+[data-file-upload-label]:hover {
+  background-color: #e8e8e8;
+}
+
+/* התאמה לרכיב הירו */
+.hero-banner {
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
